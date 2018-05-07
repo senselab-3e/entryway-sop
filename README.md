@@ -1,9 +1,9 @@
-# welcomewagon-sop
+# entryway-sop
 
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 TODO: Put more badges here.
 
-> Techical proposal for the 'welcome wagon' SOP.
+> Techical proposal for the 'entry way' SOP.
 
 TODO: Fill out this long description.
 
