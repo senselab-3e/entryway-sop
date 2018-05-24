@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+
+	<head><link rel="stylesheet" type="text/css" href="css/orange.css"></head>
+
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+	<p id="demo5"></p>
+
+
+
+
+<script>
+	
+
+	
+var Audioindex	
+	
+var Audiofile = ["cow", "bleep", "bubble", "countdown", "crowd", "eep", "gong", "jump", "shock", "suspense", "boing", "splash", "baby_birds", "bark", "cicada1", "cicada2", "halbehehe", "parrot", "peeps"];
+var numberofAudiofiles = Audiofile.length;	
+var text = "";
+var i;
+for (i = 0; i < Audiofile.length; i++) {
+	//var Audio + [i] = document.createElement ('Audio') + text;
+	// var Audio + [i]
+    text += "sounds/" + Audiofile[i] + ".mp3" + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+	
+document.getElementById("demo2").innerHTML = numberofAudiofiles;
+	
+var soundindex = ["a" , "b", "c", "d", "e", "f" , "g", "h" , "i" , "j" , "k" , "l", "m" , "n", "o" , "p" , "q", "r" , "s", "t" , "u", "v", "w" , "x" , "y","z"];
+	
+/*function orangeimage () {
+	var orgimg =
+	document.getElementById("orangeimg").src;
+    document.getElementById("demo5").innerHTML = x2;
+}*/
+	
+
+
+	
+	
+var i2;
+var numberofletters = soundindex.length;
+var onclickaddress = "";
+
+	for (i2 = 0; i2 < soundindex.length; i2++) {
+    onclickaddress += "playSound" + "(" + soundindex[i2] + ")" + "<br>";
+} 
+	
+	
+//this covers the running code of <div class="obj" onclick="playSound('a')"></div>//	
+	
+var i3;	
+var	codetest = "";
+	
+for (i3 = 0; i3 < soundindex.length; i3++) {
+  codetest += "<div class=obj" + " " + "onclick=" + "playsound" + "(" + soundindex[i3] + ")>" + "<img src='peel1.png'>" + "</div>" + "<br>";
+}	
+	
+	
+
+
+document.getElementById("demo3").innerHTML = numberofletters;	
+	
+document.getElementById("demo4").innerHTML = onclickaddress;	
+
+document.getElementById("demo5").innerHTML = codetest;		
+/*	
+var toAdd = document.createDocumentFragment();
+for(var d=0; d < soundindex.length; d++){
+   var newDiv = document.createElement('div');
+   newDiv.id = 'playSound'+i;
+   newDiv.className = 'obj';
+   toAdd.appendChild(newDiv);
+}
+
+document.appendChild(toAdd);
+	*/
+	
+	
+	//<div class="obj" onclick="playSound('a')"></div>
+
+/*
+function playSound(letter) {
+	         if(letter == 'a') {
+	             aAudio.play();
+	         } else if(letter == 'b') {
+	             bAudio.play();
+	         }
+	         else if(letter == 'c') {
+	             cAudio.play();
+	         }
+	         else if(letter == 'd') {
+	             dAudio.play();
+	         }
+	         else if(letter == 'e') {
+	             eAudio.play();
+	         }
+	         else if(letter == 'f') {
+	             fAudio.play();
+	         }
+	         else if(letter == 'g') {
+	             gAudio.play();
+	         }
+	         else if(letter == 'h') {
+	             hAudio.play();
+	         }
+	         else if(letter == 'i') {
+	             iAudio.play();
+	         }
+	         else if(letter == 'j') {
+	             jAudio.play();
+	         }
+	         else if(letter == 'k') {
+	             kAudio.play();
+	         }
+	         else if(letter == 'l') {
+	             lAudio.play();
+	         }
+	         else if(letter == 'm') {
+	             mAudio.play();
+	         }
+	         else if(letter == 'n') {
+	             nAudio.play();
+	         }
+	         else if(letter == 'o') {
+	             oAudio.play();
+	         }
+	         else if(letter == 'p') {
+	             pAudio.play();
+	         }
+	         else if(letter == 'q') {
+	             qAudio.play();
+	         }
+	         else if(letter == 'r') {
+	             rAudio.play();
+	         }
+	         else if(letter == 's') {
+	             sAudio.play();
+	         }
+	         else if(letter == 't') {
+	             tAudio.play();
+	         }
+	         else if(letter == 'u') {
+	             uAudio.play();
+	         }
+	         else if(letter == 'v') {
+	             vAudio.play();
+	         }
+	         else if(letter == 'w') {
+	             wAudio.play();
+	         }
+	         else if(letter == 'x') {
+	             xAudio.play();
+	         }
+	         else if(letter == 'y') {
+	             yAudio.play();
+	         }
+	         else if(letter == 'z') {
+	             zAudio.play();
+	         }
+}*/
+	
+</script>
+
+</body>
+</html>
+

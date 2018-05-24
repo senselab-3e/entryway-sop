@@ -1,0 +1,108 @@
+<!-- codepen starts here-->
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>soundbutton</title>
+  	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sound button</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="soundbutton.css">
+     <!--  <link rel="stylesheet/less" type="text/css" href="style.less" />
+  <script src="less.js" type="text/javascript"></script>-->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+ 
+</head>
+
+<body>
+
+ <div class="table-responsive">          
+  	<div class="table">
+    		
+		<div class="obj td" onclick="playSound('a')"></div>
+					<div class="buttongrid"><button type="button" class= "btn btn-default btn-circle"onclick="playSound('b')"></button></div>
+				<div class="buttongrid"> <button type="button" class="btn btn-default btn-circle" onclick="playSound('c')"></button></div>
+			
+				<div class="buttongrid"> <button type="button" class="btn btn-default btn-circle" onclick="playSound('d')"></button></div>
+				<div class="buttongrid"> <button type="button" class="btn btn-default btn-circle" onclick="playSound('e')"></button></div>
+				<div class="buttongrid"><button type="button" class="btn btn-default btn-circle" onclick="playSound('f')"></button></div>
+			
+				<div class="buttongrid"><button type="button" class="btn btn-default btn-circle" onclick="playSound('g')"></button></div>
+				<div class="buttongrid"><button type="button" class="btn btn-default btn-circle" onclick="playSound('h')"></button></div>
+				<div class="buttongrid"><button type="button" class="btn btn-default btn-circle" onclick="playSound('i')"></button></div>
+				
+			<div class="buttongrid"> <button type="button" class="btn btn-default btn-circle" onclick="playSound('j')"></button></div>
+				<div class="buttongrid"> <button type="button" class="btn btn-default btn-circle" onclick="playSound('k')"></button></div>
+				<div class="buttongrid"> <button type="button" class="btn btn-default btn-circle" onclick="playSound('l')"></button></div></div>
+			
+		
+	</div>
+	</div>
+
+
+     <script>
+	     var aAudio = new Audio('sounds/cow.mp3');
+	     var bAudio = new Audio('sounds/bleep.mp3');
+	     var cAudio = new Audio('sounds/bubble.mp3');
+	     var dAudio = new Audio('sounds/countdown.mp3');
+	     var eAudio = new Audio('sounds/crowd.mp3');
+	     var fAudio = new Audio('sounds/eep.mp3');
+	     var gAudio = new Audio('sounds/gong.mp3');
+	     var hAudio = new Audio('sounds/jump.mp3');
+	     var iAudio = new Audio('sounds/shock.mp3');
+	     var jAudio = new Audio('sounds/suspense.mp3');
+	     var kAudio = new Audio('sounds/boing.mp3');
+	     var lAudio = new Audio('sounds/splash.mp3');
+	     function playSound(letter) {
+	         if(letter == 'a') {
+	             aAudio.play();
+	         } else if(letter == 'b') {
+	             bAudio.play();
+	         }
+	         else if(letter == 'c') {
+	             cAudio.play();
+	         }
+	         else if(letter == 'd') {
+	             dAudio.play();
+	         }
+	         else if(letter == 'e') {
+	             eAudio.play();
+	         }
+	         else if(letter == 'f') {
+	             fAudio.play();
+	         }
+	         else if(letter == 'g') {
+	             gAudio.play();
+	         }
+	         else if(letter == 'h') {
+	             hAudio.play();
+	         }
+	         else if(letter == 'i') {
+	             iAudio.play();
+	         }
+	         else if(letter == 'j') {
+	             jAudio.play();
+	         }
+	         else if(letter == 'k') {
+	             kAudio.play();
+	         }
+	         else if(letter == 'l') {
+	             lAudio.play();
+	         }
+	     }
+ 	</script>
+    
+  
+
+</body>
+
+</html>

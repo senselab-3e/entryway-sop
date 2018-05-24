@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.obj {
+  width: 70px;
+  height: 70px;
+  margin-left: 0px;
+  margin-top: 0px;
+ 
+  float: left;
+	top: auto;
+	background-image: url("../images/orange1.png") ;
+}

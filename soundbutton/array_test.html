@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Loops</h2>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+	
+var Audioindex	
+	
+var Audiofile = ["cow", "bleep", "bubble", "countdown", "crowd", "eep", "gong", "jump", "shock", "suspense", "boing", "splash", "baby_birds", "bark", "cicada1", "cicada2", "halbehehe", "parrot", "peeps"];
+var numberofAudiofiles = Audiofile.length;	
+var text = "";
+var i;
+for (i = 0; i < Audiofile.length; i++) {
+    text += "sounds/" + Audiofile[i] + ".mp3" + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+	
+document.getElementById("demo2").innerHTML = numberofAudiofiles;
+	
+var soundindex = ["a" , "b", "c", "d", "e", "f" , "g", "h" , "i" , "j" , "k" , "l", "m" , "n", "o" , "p" , "q", "r" , "s", "t" , "u", "v", "w" , "x" , "y","z"];
+	
+
+var numberofletters = soundindex.length;
+var onclickaddress = "";
+
+	for (i2 = 0; i2 < soundindex.length; i2++) {
+    onclickaddress += "playSound" + "(" + soundindex[i2] + ")" + "<br>";
+}	
+
+document.getElementById("demo3").innerHTML = numberofletters;	
+	
+document.getElementById("demo4").innerHTML = onclickaddress;		
+	
+</script>
+
+</body>
+</html>
+
