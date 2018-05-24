@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p><button onclick="addOrange()">Add an Orange</button></p>
+<p id="demo"></p>
+
+<script>	
+//The appendChild() method appends a node as the last child of a node.//	
+	
+var imgSrc = 'org_img.jpeg';
+
+function generateImage() {
+  var img = document.createElement('img')
+  img.src = imgSrc;
+  
+  return img;
+}
+/*
+for (var i = 0; i < 10; i++ ) {
+  document.body.appendChild(generateImage());
+}*/	
+	
+var sounds = ["00", "01", "02", "03", "04", "05"];
+
+	
+//the push() method adds a new element to an array (at the end)://	
+	
+/*
+------>Changing Elements
+Array elements are accessed using their index number:<br>
+Array indexes start with 0. [0] is the first array element, [1] is the second, [2] is the third ..
+*/
+	
+	
+function addOrange() {
+      //this adds the text string but each iteration will be 06[00], 06[01]
+	//document.body.appendChild(generateImage());
+	
+	document.body.appendChild(generateImage());
+	sounds.push("06");
+	
+	document.getElementById("demo").innerHTML = sounds.length;
+}	
+	
+var i;
+	
+for (i = 0; i < sounds.length; i++) {
+    document.body.appendChild(generateImage());
+	document.getElementById("demo").innerHTML =
+	sounds.length;
+}
+
+	
+
+	
+</script>
+
+</body>
+</html>
+
