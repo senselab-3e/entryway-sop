@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<head>
+
+<style>	
+	
+
+
+	
+#oranges {
+	height: 400px;
+	width: 300px;
+	float: left;
+	background: linear-gradient(to top, #70efc4 0%, #ff99cc 100%)}	
+/*	
+#apples {
+    height: 400px;
+	float: left;
+    background: linear-gradient(to top, #ff4378 0%, #ff6666 100%)
+		
+}	// these rely on <div id ="oranges"></div>
+<div id= "apples"></div>   where as the other relies on class*/
+
+div.pears {
+    background: linear-gradient(to top, #ff6666 -40%,  #ff4378 100%)
+		
+		
+	}
+	
+	#demo { height: 200px;
+	width: 200px;
+	outline-style: solid;
+	outline-color: blue;
+		
+		/*background-color: #A63839;*/
+	}
+/* the percent value talks about at what point the gradient begins 0% is mid point -- -20% below --- but through opacity*/ 
+	
+
+	
+	
+</style>
+
+	<script>
+	
+/*https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_createelement4*/
+		
+		//so this is creating new DIVs -- just not with color options. 
+
+function myFunction() {
+    var div = document.createElement("DIV");
+    var t = document.createTextNode("This is a paragraph.");
+	//var styling = document.createAttribute("#333");
+    div.appendChild(t);
+	//div.appendChild(styling);
+    document.getElementById("oranges").appendChild(div);
+	
+}
+		
+		// look at this: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_document_createattribute
+</script>
+
+</head>
+<body>
+ <p id="demo">
+ <p id="demo2">
+</p>
+
+	<div id ="oranges">div orange</div>
+	
+	<div class="pears"></div>
+	
+	
+	
+
+<button onclick="myFunction()">Try it</button>
+
+</body>
+</html>
+

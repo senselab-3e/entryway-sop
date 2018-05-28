@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="900" height="900" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+
+var colors =
+	["FE4365", "F9CDAE", "A8DCD9", "C02A43", "537679", "ECD179", "83AF9B"]; 
+//var numberofcolors = colors.length;	
+var numberofboxes = colors.length;	
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var ctx2 = c.getContext("2d");
+	
+ctx.fillStyle = "#" + colors[Math.floor(Math.random() * colors.length)];
+ctx2.fillStyle = "#" + colors[Math.floor(Math.random() * colors.length)];	
+
+
+	
+//ctx.fillStyle = "#FF0000";
+ctx.fillRect(20, 20, 400, 400);
+ctx2.fillRect(500, 20, 300, 300);	
+
+	
+
+	
+	
+for (i = 0; i < colors.length; i++) {
+	
+	//coming soon
+	//var ctx = document.createElement
+	
+}
+	
+//Tip: Use the createTextNode() method to create a text node.Tip: After the element is created, use the element.appendChild() or element.insertBefore() method to insert it to the document.	
+
+</script>
+
+
+<p></p>
+
+</body>
+</html>
