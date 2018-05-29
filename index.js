@@ -26,7 +26,16 @@ app.post('/fileupload', function(req, res) {
 });
 
 app.get('/listuploads', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });
+    res.json([
+        {
+            name:'Aaaa-01.jpg',
+            xdepth: 9,
+            ydepth: 12.00
+        }, {
+            name: 'Aaaa-02.jpg',
+            xdepth: -13.0,
+            ydepth: -24.00
+        }] );
 });
 
 app.use(express.static('assets'))

@@ -37,21 +37,15 @@
  
 		data-0="display:block; left:0%;top:5%;" data-1800="top:-120%" data-9900="display:none;">
 
-Hello
-  <div id="container" class="container">
-    
-    <ul id="scene" class="scene border fill">
-      <li class="layer expand-width" data-depth-y="12.00" data-depth-x="9.0"><img src="images/Aaaa-01.jpg" ></li>
-      <li class="layer expand-width" data-depth-y="-24.00"data-depth-x="-13.0"><img src="images/Aaaa-02.jpg"></li>
-      <li class="layer expand-width" data-depth-y="28.80" data-depth-x="19.0"><img src="images/Aaaa-03.jpg" width="400px" height="300px"></li>
-      <li class="layer expand-width" data-depth-y="33" data-depth-x="-21.0"><img src="images/Aaaa-04.jpg" width="300px" height="400px"></li>
-      <li class="layer expand-width" data-depth-y="-24.20"data-depth-x="26.0"><img src="images/Aaaa-05.jpg"></li>
-      <li class="layer expand-width" data-depth-y="15"data-depth-x="-29.0"><img src="images/Aaaa-06.jpg"></li>
-       
-    </ul>
+    <div id="container" class="container">
+      
+      <ul id="scene" class="scene border fill">
+        <li class="layer expand-width" data-depth-y="28.80" data-depth-x="19.0"><img src="images/Aaaa-03.jpg" width="400px" height="300px"></li>
+        
+      </ul>
 
-    
-  </div>
+      
+    </div>
 	</div>
   
   
@@ -101,13 +95,12 @@ Hello
 	  
 
   // Nothing new here...it's all in the CSS!
-  var scene = document.getElementById('scene');
-  var parallax = new Parallax(scene);
+  
 	  
 	  var scene2 = document.getElementById('scene2');
   var parallax = new Parallax(scene2);
 	  
-	
+	/*
   
    var scene3 = document.getElementById('scene3');
   var parallax3 = new Parallax(scene3);
@@ -117,7 +110,7 @@ Hello
 	  
 	  var scene5 = document.getElementById('scene5');
   var parallax5 = new Parallax(scene5);
-
+*/
 
 
   </script>
@@ -127,12 +120,27 @@ Hello
 
   <script>
     $(document).ready(function() {
+      console.log("LOADING....................................................")
         $.ajax({
             url: "http://localhost:8080/listuploads"
         }).then(function(data) {
-          console.log(JSON.stringify(data));
+          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!: " + JSON.stringify(data));
           //$('.greeting-id').append(data.id);
           //$('.greeting-content').append(data.content);
+
+          // clear the existing list
+         // $('#container .scene li').remove();
+
+          $.each(data, function(index,fileinfo) {
+            console.log('VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV::::::::::: ' + fileinfo.name)
+
+      //      <li class="layer expand-width" data-depth-y="' + filename.ydepth + '" data-depth-x="' + filename.ydepth + '"><img src="images/' + filename.name + '" ></li>
+//          <li class="layer expand-width" data-depth-y="-24.00"data-depth-x="-13.0"><img src="images/Aaaa-02.jpg"></li>
+            $('#container .scene').append('<li class="layer expand-width" data-depth-y="' + fileinfo.ydepth + '" data-depth-x="' + fileinfo.ydepth + '"><img src="images/' + fileinfo.name + '" ></li>')
+          });
+        }).then(function(){
+          var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
         });
     });
   </script>
