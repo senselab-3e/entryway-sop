@@ -29,7 +29,7 @@
 var img;
 
 function preload() {
-  img = loadImage('images/original.png');
+  img = loadImage('assets/images/original.png');
 }
 
 function setup() {
