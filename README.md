@@ -6,6 +6,8 @@
 [![MIT](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/senselab-3e/entryway-sop.svg?columns=all)](https://waffle.io/senselab-3e/entryway-sop) 
+
 > Techical proposal for the 'entry way' SOP.
 
 TODO: Fill out this long description.
