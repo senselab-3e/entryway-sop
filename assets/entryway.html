@@ -56,8 +56,6 @@
   
  <div id="container2" class="container2">
 		<ul id="scene2" class="scene2">
-			<li class="layer expand-width" data-depth-x="12"><img src="images/Aaaa-07.jpg"></li>
-        <li class="layer expand-width" data-depth-x="-9.0"><img src="images/Aaaa-10.jpg"></li>
 		</ul>
 	</div>
   
@@ -70,10 +68,6 @@
 
 <script type="text/javascript" src="dist/skrollr.min.js"></script>
 
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="../skrollr-ie/dist/skrollr.ie.min.js"></script>
-	<![endif]-->
-
 	<script type="text/javascript">
 	var s = skrollr.init({
 		edgeStrategy: 'set',
@@ -85,34 +79,12 @@
 		}
 	});
 	</script>
-    
-
-  
-  
   
   <script src="js/parallax.js"></script>
   <script>
-	  
 
-  // Nothing new here...it's all in the CSS!
-  
-	  
 	  var scene2 = document.getElementById('scene2');
-  var parallax = new Parallax(scene2);
-	  
-	/*
-  
-   var scene3 = document.getElementById('scene3');
-  var parallax3 = new Parallax(scene3);
-  
-  var scene4 = document.getElementById('scene4');
-  var parallax4 = new Parallax(scene4);
-	  
-	  var scene5 = document.getElementById('scene5');
-  var parallax5 = new Parallax(scene5);
-*/
-
-
+    var parallax = new Parallax(scene2);
   </script>
 
 <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
@@ -120,23 +92,11 @@
 
   <script>
     $(document).ready(function() {
-      console.log("LOADING....................................................")
         $.ajax({
             url: "http://localhost:8080/listuploads"
         }).then(function(data) {
-          console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!: " + JSON.stringify(data));
-          //$('.greeting-id').append(data.id);
-          //$('.greeting-content').append(data.content);
-
-          // clear the existing list
-         // $('#container .scene li').remove();
-
           $.each(data, function(index,fileinfo) {
-            console.log('VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV::::::::::: ' + fileinfo.name)
-
-      //      <li class="layer expand-width" data-depth-y="' + filename.ydepth + '" data-depth-x="' + filename.ydepth + '"><img src="images/' + filename.name + '" ></li>
-//          <li class="layer expand-width" data-depth-y="-24.00"data-depth-x="-13.0"><img src="images/Aaaa-02.jpg"></li>
-            $('#container .scene').append('<li class="layer expand-width" data-depth-y="' + fileinfo.ydepth + '" data-depth-x="' + fileinfo.ydepth + '"><img src="images/' + fileinfo.name + '" ></li>')
+            $('#container .scene').append('<li class="layer expand-width" data-depth-y="' + fileinfo.ydepth + '" data-depth-x="' + fileinfo.ydepth + '"><img src="uploads/' + fileinfo.name + '" ></li>')
           });
         }).then(function(){
           var scene = document.getElementById('scene');
