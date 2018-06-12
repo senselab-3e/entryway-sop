@@ -1,9 +1,13 @@
+const SocketServer = require('ws').Server;
 var express = require('express');
 var app = express();
+
 var path = require('path');
 var fs = require('fs');
 var formidable = require('formidable');
 var shuffle = require('shuffle-array');
+
+var connectedUsers = [];
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
@@ -24,6 +28,7 @@ app.post('/fileupload', function(req, res) {
       });
   
       res.sendFile(__dirname + '/index.html');
+      wss.broadcast('A new file has been uploaded by another user!')
 });
 
 function getMeRandom() {
@@ -52,4 +57,19 @@ app.get('/listuploads', function(req, res) {
 app.use(express.static('assets'))
 
 console.log("Server Listening on port http://localhost:8080.")
-app.listen(8080);
+
+var server = app.listen(8080);
+const wss = new SocketServer({ server });
+
+wss.on('connection', function connection(ws) {
+    ws.on('message', function incoming(message) {
+        console.log('received: %s', message);
+        connectedUsers.push(message);
+    });
+});
+
+wss.broadcast = function broadcast(data) {
+    wss.clients.forEach(function each(client) {
+        client.send(data);client.send(data);
+    });
+  };
