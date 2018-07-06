@@ -34,6 +34,7 @@ MongoClient.connect(url, function(err, client) {
   });
 */
 app.get('/', function(req, res) {
+    /*
     var r = Math.random();
     console.log("Random number is: " + r);
     if (r < 0.2 ) {
@@ -41,6 +42,8 @@ app.get('/', function(req, res) {
     } else {
         res.sendFile(path.join(__dirname + '/index.html'));
     }
+    */
+    res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 app.post('/fileupload', function(req, res) {
