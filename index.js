@@ -33,7 +33,13 @@ MongoClient.connect(url, function(err, client) {
   });
 
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/index.html'));
+    var r = Math.random();
+    console.log("Random number is: " + r);
+    if (r < 0.2 ) {
+        res.redirect("/" + r);
+    } else {
+        res.sendFile(path.join(__dirname + '/index.html'));
+    }
 });
 
 app.post('/fileupload', function(req, res) {
@@ -96,3 +102,8 @@ wss.broadcast = function broadcast(data) {
         client.send(data);client.send(data);
     });
   };
+
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res){
+    res.sendFile(path.join(__dirname + '/404.html'));
+  });
