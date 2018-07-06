@@ -1,13 +1,36 @@
+// https://www.npmjs.com/package/ws
 const SocketServer = require('ws').Server;
 var express = require('express');
 var app = express();
 
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
+
 var path = require('path');
 var fs = require('fs');
+
+//https://www.npmjs.com/package/formidable
 var formidable = require('formidable');
+
+// https://www.npmjs.com/package/shuffle-array
 var shuffle = require('shuffle-array');
 
 var connectedUsers = [];
+// Connection URL
+const url = 'mongodb://localhost:27017';
+
+const dbName = 'entryway';
+
+/*
+HERE IS THE INFORMATION ON INSERTING, DELETING, UPDATING, ETC.
+https://www.npmjs.com/package/mongodb
+*/
+MongoClient.connect(url, function(err, client) {
+    assert.equal(null, err);
+    console.log("Connected successfully to server");
+    const db = client.db(dbName);
+    client.close();
+  });
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));

@@ -24,7 +24,16 @@ TODO: Fill out this long description.
 
 ## Install
 
+To install the DB  you have 2 choices.
+
+1. You can install it locally and run it locally
 ```
+https://docs.mongodb.com/manual/installation/
+```
+
+2. Docker.
+```
+docker run -p 27017:27017 bitnami/mongodb:latest
 ```
 
 ## Usage
