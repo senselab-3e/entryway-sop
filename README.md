@@ -36,6 +36,31 @@ https://docs.mongodb.com/manual/installation/
 docker run -p 27017:27017 bitnami/mongodb:latest
 ```
 
+Other useful commands:
+
+To see the running process:
+```
+docker ps
+```
+
+EASIEST way to stop all containers:
+```
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+```
+
+To stop:
+```
+docker stop <PROCESS_ID>
+```
+
+To remove the stopped instance:
+```
+docker rm <PROCESS_ID>
+```
+
+
+
 ## Usage
 
 ```

@@ -3,8 +3,8 @@ const SocketServer = require('ws').Server;
 var express = require('express');
 var app = express();
 
-const MongoClient = require('mongodb').MongoClient;
-const assert = require('assert');
+// const MongoClient = require('mongodb').MongoClient;
+// const assert = require('assert');
 
 var path = require('path');
 var fs = require('fs');
@@ -24,14 +24,15 @@ const dbName = 'entryway';
 /*
 HERE IS THE INFORMATION ON INSERTING, DELETING, UPDATING, ETC.
 https://www.npmjs.com/package/mongodb
-*/
+
 MongoClient.connect(url, function(err, client) {
     assert.equal(null, err);
     console.log("Connected successfully to server");
     const db = client.db(dbName);
+    
     client.close();
   });
-
+*/
 app.get('/', function(req, res) {
     var r = Math.random();
     console.log("Random number is: " + r);
