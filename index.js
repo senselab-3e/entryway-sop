@@ -72,7 +72,7 @@ function getMeRandom() {
 app.get('/listuploads', function(req, res) {
 
     fs.readdir(__dirname + '/assets/uploads/', function(err, items) {
-        console.log(items);
+       // console.log(items);
         shuffle(items);
         var rarray = items.slice(0, 3);
         var response = [];
@@ -96,7 +96,7 @@ const wss = new SocketServer({ server });
 
 wss.on('connection', function connection(ws) {
     ws.on('message', function incoming(message) {
-        console.log('received: %s', message);
+        // console.log('received: %s', message);
         connectedUsers.push(message);
     });
 });
