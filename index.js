@@ -89,9 +89,9 @@ app.get('/listuploads', function(req, res) {
 
 app.use(express.static('assets'))
 
-console.log("Server Listening on port http://localhost:80.")
+console.log("Server Listening on port http://localhost:8080.")
 
-var server = app.listen(80);
+var server = app.listen(8080);
 const wss = new SocketServer({ server });
 
 wss.on('connection', function connection(ws) {
